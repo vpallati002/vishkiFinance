@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/primeng/resources/themes/nova//theme.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeicons/primeicons.css";
+@import "./styles/position-helpers.scss";
+@import "./styles/grid.scss";
+@import "./styles/colors.scss";
+
+article {
+   margin: auto;
+   width: 80%;
+   height: 100%;
+   background: var(primary-color);
+   max-width: 1300px;
+   //font-family: 'Roboto-Regular';
+   font-size: 16px;
+   color: $f-c-primary-grey;
+}
+
+.title {
+  //
+  font-size: 32px;
+  color: $f-c-primary;
+}
+
+h1 {
+
+  font-size: 28px;
+  color: $f-c-primary;
+}
+
+h2 {
+
+  font-size: 22px;
+  color: $f-c-accent;
+}
+
+h3 {
+
+  font-size: 16px;
+  color: $f-c-primary;
+}
+
+h4 {
+
+  font-size: 14px;
+  color: $f-c-accent;
+}
+
+h5 {
+
+  font-size: 11px;
+  color: $f-c-accent;
+}
+
+a {
+
+  color: $f-c-accent;
+  font-size: 16px;
+}
+
+.page {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+ul.f-ul {
+  list-style: none;
+}
+
+li.f-li::before {
+  content: "\2022";
+  color: $f-c-light-blue;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 2em;
+  vertical-align:middle;
+}
+
+.bullet-large {
+
+  font-size: 16px;
+  color: $f-c-primary;
+}
+
+.hr-blue-bold {
+  border: 1px solid $f-c-primary;
+  background-color: $f-c-primary;
+}
+
+.min-height {
+  min-height: 540px;
+}
+
+.fit-height {
+  height: 100%;
+}
+
+.fit-width {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.center {
+  text-align: center
+}
+
+.text-decoration-none{
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media (min-width: 150px) {
+  article {
+      width: 100%;
+  }
+  .page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  article {
+      width: 100%;
+  }
+  .page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  article {
+    width: 100%;
+  }
+  .page {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 960px) {
+  article {
+    width: 90%;
+  }
+  .page {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  article {
+    width: 80%;
+  }
+}
+
+::ng-deep .p-multiselect.p-multiselect-chip .p-multiselect-token {
+  padding: 0.2145rem 0.429rem;
+  margin-right: 0.5rem;
+  background: #E3F2FD !important;
+  color: #495057 !important;
+  border-radius: 3px;
+}
