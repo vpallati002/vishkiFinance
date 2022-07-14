@@ -1,8 +1,9 @@
+import { AccountEntity } from './account.lookup.entity';
 import { ByEntity } from './by.lookup.entity';
 import { Category1Entity } from './category1.lookup.entity';
 import { Category2Entity } from './category2.lookup.entity';
 import { ForEntity } from './for.lookup.entity';
-import { PlannrdEntity } from './planned.lookup.entity';
+import { PlannedEntity } from './planned.lookup.entity';
 import { RatingEntity } from './rating.lookup.entity';
 import { TransactionTypeEntity } from './transaction_type.lookup.entity';
 
@@ -94,7 +95,7 @@ export const TransactionTypeSeed: TransactionTypeEntity[] = [
 
 ];
 
-export const PlannrdSeed: PlannrdEntity[] = [
+export const PlannedSeed: PlannedEntity[] = [
    { 
      id: 1, 
      name: 'Planned', 
@@ -206,6 +207,22 @@ export const Category2Seed: Category2Entity[] = [
   { 
     id: 2,
     name: 'Patel Bothers', 
+    isActive: true,
+    sortOrder: 2
+ }
+
+];
+
+export const AccountSeed: AccountEntity[] = [
+   { 
+     id: 1, 
+     name: 'Vishnu BOA Red', 
+     isActive: true,
+     sortOrder: 1
+  },
+  { 
+    id: 2,
+    name: 'Sumukhi BOA Red', 
     isActive: true,
     sortOrder: 2
  }

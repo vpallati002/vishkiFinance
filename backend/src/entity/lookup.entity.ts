@@ -7,7 +7,7 @@ export class LookupEntity {
   @PrimaryGeneratedColumn()
   id: number; 
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column({ type: 'varchar', length: 255, nullable: true })
   name: string;
 
   @Column()

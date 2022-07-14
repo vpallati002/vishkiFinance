@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { JwtModule } from '@auth0/angular-jwt';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { tokenGetter } from '../utils/functions';
+import { LogModule } from './log/log.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { tokenGetter } from '../utils/functions';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
+    LogModule,
     SharedModule,
     JwtModule.forRoot({
       config: {

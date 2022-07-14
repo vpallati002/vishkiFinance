@@ -1,0 +1,85 @@
+<h2>Log Transaction</h2>
+<div class="ui-g" *ngIf="lookups && form" [formGroup]="form" >
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>Account</div>
+    <p-dropdown [options]="lookups.accounts" formControlName="account" optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('account')"  ></button>
+    <small class="p-error block" *ngIf="form.touched && form.get('account')?.invalid">Account is required.</small>
+
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>Transaction Date</div>
+    <p-calendar formControlName="created"></p-calendar>
+    <small class="p-error block" *ngIf="form.touched && form.get('created')?.invalid">created is required.</small>
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>By</div>
+    <p-dropdown [options]="lookups.bys" formControlName="by" optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('by')"  ></button>
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>for</div>
+    <p-dropdown [options]="lookups.fors" formControlName="for"  optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('for')"  ></button>
+
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>Transaction Type</div>
+    <p-dropdown [options]="lookups.transactionTypes" formControlName="transactionType" optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('transactionType')"  ></button>
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>category1</div>
+    <p-dropdown [options]="lookups.category1s" formControlName="category1"  optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('category1')"  ></button>
+
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>category2</div>
+    <p-dropdown [options]="lookups.category2s" formControlName="category2"  optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('category2')"  ></button>
+
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>category3</div>
+    <p-dropdown [options]="lookups.category3s" formControlName="category3"  optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('category3')"  ></button>
+
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>ammount</div>
+    <p-inputNumber formControlName="ammount" mode="currency" currency="USD" locale="en-US"></p-inputNumber>
+    <small class="p-error block" *ngIf="form.touched && form.get('ammount')?.invalid">Ammount is required.</small>
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>review</div>
+    <textarea pInputTextarea formControlName="review"></textarea>
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>planned</div>
+    <p-dropdown [options]="lookups.planneds" formControlName="planned"  optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('planned')"  ></button>
+
+  </div>
+  <div class="ui-lg-12 ui-md-12 ui-sm-12 m-5">
+    <div>rating</div>
+    <p-dropdown [options]="lookups.ratings" formControlName="rating"  optionLabel="name" optionValue="code"></p-dropdown>
+    <button pButton label="" icon="pi pi-plus" (click)="addLookup('rating')"  ></button>
+
+  </div>
+  <div>
+    <button pButton label="Submit" icon="pi pi-play" (click)="submit()"  ></button>
+  </div>
+</div>
+
+
+
+<p-dialog header="Add Lookup" [(visible)]="showNewLookupDialog" [modal]="true" [style]="{width: '50vw'}"
+[draggable]="false" [resizable]="false" [closable]="false">
+<p class="m-0"> Enter Lookup Name </p>
+    <input type="text" [(ngModel)]="lookupName">
+    <ng-template pTemplate="footer">
+
+    <p-button icon="pi pi-check" (click)="addLookupSubmit()"  label="Ok" styleClass="p-button-text"></p-button>
+    </ng-template>
+</p-dialog>

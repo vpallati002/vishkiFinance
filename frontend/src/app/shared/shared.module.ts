@@ -10,6 +10,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LookupService } from './services/lookup.service';
 import { UtilityService } from './services/utility.service';
+import { DropdownModule } from 'primeng/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   imports: [
@@ -20,6 +24,8 @@ import { UtilityService } from './services/utility.service';
     ToastModule,
     ReactiveFormsModule,
     FormsModule,
+    DropdownModule,
+    BrowserAnimationsModule
   ],
   declarations: [ FooterComponent, HeaderComponent ],
   exports: [
@@ -31,6 +37,8 @@ import { UtilityService } from './services/utility.service';
     ToastModule,
     ReactiveFormsModule,
     FormsModule,
+    DropdownModule,
+    BrowserAnimationsModule
   ],
   providers: [HttpClient, UtilityService, LookupService, MessageService],
 })

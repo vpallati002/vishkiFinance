@@ -4,12 +4,13 @@ import {
     Column,
     ManyToOne,
 } from 'typeorm';
+import { AccountEntity } from './account.lookup.entity';
 import { ByEntity } from './by.lookup.entity';
 import { Category1Entity } from './category1.lookup.entity';
 import { Category2Entity } from './category2.lookup.entity';
 import { Category3Entity } from './category3.lookup.entity';
 import { ForEntity } from './for.lookup.entity';
-import { PlannrdEntity } from './planned.lookup.entity';
+import { PlannedEntity } from './planned.lookup.entity';
 import { RatingEntity } from './rating.lookup.entity';
 import { TransactionTypeEntity } from './transaction_type.lookup.entity';
 
@@ -18,11 +19,8 @@ export class FinanceLogEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'varchar', length: 255 })
-  name: string;
-
-  @Column()
-  isActive: boolean; 
+  @ManyToOne(() => AccountEntity)
+  account: AccountEntity;
 
   @Column({ type: 'timestamptz' })
   created: Date;
@@ -48,11 +46,11 @@ export class FinanceLogEntity {
   @Column({ type: "double precision" })
   ammount: number;
 
-  @Column()
+  @Column({nullable: true})
   review: string;
 
-  @ManyToOne(() => PlannrdEntity)
-  planned: PlannrdEntity;
+  @ManyToOne(() => PlannedEntity)
+  planned: PlannedEntity;
 
   @ManyToOne(() => RatingEntity)
   rating: RatingEntity;
