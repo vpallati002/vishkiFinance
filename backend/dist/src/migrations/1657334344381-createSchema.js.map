@@ -1,0 +1,1 @@
+{"version":3,"file":"1657334344381-createSchema.js","sourceRoot":"","sources":["../../../src/migrations/1657334344381-createSchema.ts"],"names":[],"mappings":";;;AAEA,MAAa,yBAAyB;IAE3B,KAAK,CAAC,EAAE,CAAC,WAAwB;QACpC,MAAM,WAAW,CAAC,YAAY,CAAC,eAAe,CAAC,CAAC;IACpD,CAAC;IAEM,KAAK,CAAC,IAAI,CAAC,WAAwB;QACtC,MAAM,WAAW,CAAC,UAAU,CAAC,eAAe,CAAC,CAAC;IAClD,CAAC;CAEJ;AAVD,8DAUC"}

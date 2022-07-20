@@ -1,0 +1,16 @@
+import { AccountEntity } from './account.lookup.entity';
+import { ByEntity } from './by.lookup.entity';
+import { Category1Entity } from './category1.lookup.entity';
+import { Category2Entity } from './category2.lookup.entity';
+import { ForEntity } from './for.lookup.entity';
+import { PlannedEntity } from './planned.lookup.entity';
+import { RatingEntity } from './rating.lookup.entity';
+import { TransactionTypeEntity } from './transaction_type.lookup.entity';
+export declare const BySeed: ByEntity[];
+export declare const ForSeed: ForEntity[];
+export declare const TransactionTypeSeed: TransactionTypeEntity[];
+export declare const PlannedSeed: PlannedEntity[];
+export declare const RatingSeed: RatingEntity[];
+export declare const Category1Seed: Category1Entity[];
+export declare const Category2Seed: Category2Entity[];
+export declare const AccountSeed: AccountEntity[];

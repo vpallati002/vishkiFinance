@@ -1,0 +1,1 @@
+{"version":3,"file":"transaction_type.lookup.entity.js","sourceRoot":"","sources":["../../../src/entity/transaction_type.lookup.entity.ts"],"names":[],"mappings":";;;;;;;;;AAAA,qCAAiC;AACjC,mDAA+C;AAG/C,IAAa,qBAAqB,GAAlC,MAAa,qBAAsB,SAAQ,4BAAY;CAAG,CAAA;AAA7C,qBAAqB;IADjC,IAAA,gBAAM,EAAC,EAAE,MAAM,EAAE,eAAe,EAAE,IAAI,EAAE,yBAAyB,EAAE,CAAC;GACxD,qBAAqB,CAAwB;AAA7C,sDAAqB"}
